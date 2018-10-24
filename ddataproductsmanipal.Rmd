@@ -1,0 +1,37 @@
+---
+title: "products"
+author: "vijeta"
+date: "24/10/18"
+output:
+  html_document:
+    df_print: paged
+  word_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Executive summary
+Create a web page using R Markdown that features a map created with Leaflet.
+
+Host your webpage on either GitHub Pages, RPubs, or NeoCities.
+
+Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. We would love to see you show off your creativity!
+
+
+I am dispaying here manipal,which is a city in the state of karnataka of india.
+```{r}
+library(leaflet)
+```
+
+```{r}
+mapMAN <- leaflet() %>%
+  addTiles()
+
+mapMAN <- mapMAN %>%
+  addMarkers(lat=13.3605, lng=74.7864,
+             popup="Manipal-The ENdpoint")
+mapMAN
+```
